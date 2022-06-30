@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Kategori;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -19,5 +20,15 @@ class DatabaseSeeder extends Seeder
         $this->call([
             BarangSeeder::class
         ]);
+
+        Kategori::create(
+            ['nama' => 'Mudah Pecah']
+        );
+        Kategori::create(
+            ['nama' => 'Mudah Sobek']
+        );
+        Kategori::create(
+            ['nama' => 'Mudah Nangis']
+        );
     }
 }
